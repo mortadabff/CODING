@@ -7,30 +7,235 @@
 ## 📋 TABLEAUX / ARRAYS
 
 ### Facile
-- Two Sum
-- Contains Duplicate
-- Remove Duplicates from Sorted Array
-- Move Zeroes
-- Best Time to Buy and Sell Stock
-- Maximum Subarray (Kadane's Algorithm)
-- Missing Number
-- Duplicate Number
+
+#### 1️⃣ Two Sum
+**Énoncé:** Étant donné un tableau d'entiers `nums` et un entier `target`, retourne les indices des deux éléments dont la somme est égale à `target`. Chaque solution est unique et un même élément ne peut pas être utilisé deux fois.
+
+**Exemples de test:**
+```
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explication: nums[0] + nums[1] == 9, on retourne [0, 1]
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Explication: nums[1] + nums[2] == 6
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+```
+
+---
+
+#### 2️⃣ Contains Duplicate ⭐
+**Énoncé:** Étant donné un tableau d'entiers, détermine s'il contient au moins une valeur présente plusieurs fois. Retourne `true` si un doublon existe, sinon `false`.
+
+**Exemples de test:**
+```
+Input: nums = [1,2,3,4]
+Output: false
+
+Input: nums = [1,2,2,4]
+Output: true
+
+Input: nums = [1]
+Output: false
+```
+
+---
+
+#### 3️⃣ Remove Duplicates from Sorted Array
+**Énoncé:** Un tableau trié peut contenir plusieurs occurrences d'une même valeur. Supprime les doublons sur place (sans créer un nouveau tableau) et retourne le nombre d'éléments distincts.
+
+**Exemples de test:**
+```
+Input: nums = [1,1,2]
+Output: k = 2, nums = [1,2,_]
+
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: k = 5, nums = [0,1,2,3,4,_,_,_,_,_]
+
+Input: nums = [1]
+Output: k = 1, nums = [1]
+```
+
+---
+
+#### 4️⃣ Move Zeroes
+**Énoncé:** Déplace tous les zéros à la fin du tableau tout en conservant l'ordre des autres éléments. La modification doit être faite directement dans le tableau.
+
+**Exemples de test:**
+```
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+Input: nums = [0]
+Output: [0]
+
+Input: nums = [0,0,1]
+Output: [1,0,0]
+```
+
+---
+
+#### 5️⃣ Best Time to Buy and Sell Stock
+**Énoncé:** On te donne le prix d'une action pour chaque jour. Tu peux acheter une seule fois puis vendre une seule fois. Calcule le profit maximal possible. Si aucun bénéfice n'est possible, retourne 0.
+
+**Exemples de test:**
+```
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explication: Achat à 1, vente à 6
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explication: Pas de profit possible
+
+Input: prices = [2,4,1]
+Output: 2
+Explication: Achat à 2, vente à 4
+```
+
+---
+
+#### 6️⃣ Maximum Subarray (Kadane's Algorithm)
+**Énoncé:** Trouve la sous-partie contiguë d'un tableau dont la somme est maximale. Retourne cette somme.
+
+**Exemples de test:**
+```
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explication: Sous-tableau [4,-1,2,1] a la somme maximale = 6
+
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explication: Sous-tableau [5,4,-1,7,8]
+
+Input: nums = [-1]
+Output: -1
+```
+
+---
+
+#### 7️⃣ Missing Number
+**Énoncé:** On te donne un tableau contenant tous les nombres de 0 à n, sauf un. Retrouve le nombre manquant.
+
+**Exemples de test:**
+```
+Input: nums = [3,0,1]
+Output: 2
+
+Input: nums = [0,1]
+Output: 2
+
+Input: nums = [9,6,4,2,3,5,7,0,1]
+Output: 8
+```
+
+---
+
+#### 8️⃣ Find the Duplicate Number
+**Énoncé:** Le tableau contient n+1 nombres compris entre 1 et n. Un seul nombre est dupliqué. Retrouve ce nombre sans modifier le tableau.
+
+**Exemples de test:**
+```
+Input: nums = [1,3,4,2,2]
+Output: 2
+
+Input: nums = [3,1,3,4,2]
+Output: 3
+
+Input: nums = [1,4,4,2,4]
+Output: 4
+```
+
+---
 
 ### Moyen
-- Product of Array Except Self
-- Rotate Array
-- Merge Sorted Array
-- Search in Rotated Sorted Array
-- 3Sum
-- Container With Most Water
-- First Missing Positive
-- Majority Element
+
+#### 9️⃣ Product of Array Except Self
+**Énoncé:** Pour chaque position du tableau, calcule le produit de tous les autres éléments, sans utiliser la division.
+
+**Exemples de test:**
+```
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
+
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+```
+
+---
+
+#### 🔟 Rotate Array
+**Énoncé:** Tourne le tableau vers la droite de `k` pas. La rotation doit être faite sur place.
+
+**Exemples de test:**
+```
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+
+Input: nums = [-1,-100,3,99], k = 2
+Output: [3,99,-1,-100]
+```
+
+---
+
+#### 1️⃣1️⃣ Merge Sorted Array
+**Énoncé:** On te donne deux tableaux triés `nums1` et `nums2`. Fusionne-les en un seul tableau trié. Fait la fusion sur place dans `nums1`.
+
+**Exemples de test:**
+```
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+```
+
+---
+
+#### 1️⃣2️⃣ Search in Rotated Sorted Array
+**Énoncé:** Un tableau trié a été tourné. Cherche une valeur cible et retourne son index. Si elle n'existe pas, retourne -1. La complexité doit être O(log n).
+
+**Exemples de test:**
+```
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+
+Input: nums = [4,5,6,7,0,1,2], target = 3
+Output: -1
+```
+
+---
 
 ### Difficile
-- Trapping Rain Water
-- Median of Two Sorted Arrays
-- Sliding Window Maximum
-- LRU Cache
+
+#### 1️⃣3️⃣ Trapping Rain Water
+**Énoncé:** Calcule combien d'eau peut être piégée après la pluie en fonction de l'élévation du terrain.
+
+**Exemples de test:**
+```
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+
+Input: height = [4,2,0,3,2,5]
+Output: 9
+```
+
+---
+
+#### 1️⃣4️⃣ Median of Two Sorted Arrays
+**Énoncé:** Trouve la médiane de deux tableaux triés. La complexité doit être O(log(min(m, n))).
+
+**Exemples de test:**
+```
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.0
+
+Input: nums1 = [1,2], nums2 = [3,4]
+Output: 2.5
+```
 
 ---
 
